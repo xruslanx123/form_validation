@@ -2,6 +2,8 @@ library form_validation;
 
 import 'package:flutter/material.dart';
 
+export 'package:form_validation/form_validators.dart';
+
 class FormValidation {
 
   FormValidation._();
