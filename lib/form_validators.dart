@@ -66,7 +66,7 @@ String? _maxCharactersCount(int max, dynamic value) {
   assert(value is String);
   int charCount = (value as String).length;
 
-  if(charCount > max) return "Minimum $max characters";
+  if(charCount > max) return "Maximum $max characters";
   return null;
 }
 
