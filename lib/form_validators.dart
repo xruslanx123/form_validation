@@ -4,9 +4,10 @@ import 'package:form_validation/form_validation.dart';
 String? _required(dynamic value) {
   print('$value: ${value.runtimeType}');
   if(value == null) return "Required";
-  print('not null');
-  if(value is String && value.isEmpty) return "Required";
-  print('String not empty');
+  if(value is String) {
+    if(value.isEmpty || value.trim().isEmpty)
+    return "Required";
+  }
   return null;
 }
 
