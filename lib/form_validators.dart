@@ -2,11 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:form_validation/form_validation.dart';
 
 String? _required(dynamic value) {
-  print('$value: ${value.runtimeType}');
   if(value == null) return "Required";
   if(value is String) {
     if(value.isEmpty || value.trim().isEmpty)
-    return "Required";
+      return "Required";
   }
   return null;
 }
