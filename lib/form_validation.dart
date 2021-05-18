@@ -8,11 +8,16 @@ class FormValidation {
 
   FormValidation._();
 
+  static bool printErrors = false;
+
   static String? validate(dynamic value, List<FormFieldValidator<dynamic>> validators) {
     for (var validator in validators) {
       var error = validator(value);
-      if(error != null)
+      if(error != null) {
+        if(printErrors)
+          print(error);
         return error;
+      }
     }
     return null;
   }
